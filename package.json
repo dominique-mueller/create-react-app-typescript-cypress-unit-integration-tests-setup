@@ -7,25 +7,30 @@
     "type": "git",
     "url": "https://github.com/dominique-mueller/create-react-app-typescript-cypress-unit-integration-tests-setup"
   },
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.24",
-    "@types/node": "^12.20.20",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.3.5",
-    "web-vitals": "^1.1.2"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "cypress run-ct",
+    "test:runner": "cypress open-ct"
+  },
+  "dependencies": {
+    "react": "17.0.x",
+    "react-dom": "17.0.x",
+    "web-vitals": "1.1.x"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "3.9.x",
+    "@cypress/instrument-cra": "1.4.x",
+    "@cypress/react": "5.9.x",
+    "@cypress/webpack-dev-server": "1.5.x",
+    "@testing-library/cypress": "8.0.x",
+    "@types/node": "14.17.x",
+    "@types/react-dom": "17.0.x",
+    "@types/react": "17.0.x",
+    "cypress": "8.3.x",
+    "html-webpack-plugin": "4.5.x",
+    "react-scripts": "4.0.3",
+    "typescript": "4.4.x"
   },
   "eslintConfig": {
     "extends": [

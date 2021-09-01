@@ -1,9 +1,12 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
 import App from './App';
+import { mount } from '@cypress/react';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+it('renders learn react link', () => {
+  mount(<App />);
+
+  // Without testing-library
+  // cy.get('a').should('exist');
+
+  // With testing-library
+  cy.findByText(/learn react/i).should('exist');
 });
