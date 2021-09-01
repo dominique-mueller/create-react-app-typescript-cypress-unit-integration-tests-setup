@@ -37,3 +37,7 @@ jobs:
         run: npm run test
         env:
           CI: true
+          # Fix GitHub Actions issue where too many file watchers might potentially lead to issues
+          # Original error: "Error from chokidar [...] Error: ENOSPC: System limit for number of file watchers reached [...]"
+          # See <https://github.com/cypress-io/cypress/issues/17173#issuecomment-887257762>
+          CHOKIDAR_USEPOLLING: 1
